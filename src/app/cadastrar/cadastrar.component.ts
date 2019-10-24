@@ -11,6 +11,7 @@ export class CadastrarComponent implements OnInit {
   nome: string;
   telefone: string;
   email: string;
+  sexo: string;
   conversaoUsuario;
 
   constructor(private usuario: AppComponent) { } 
@@ -21,12 +22,13 @@ export class CadastrarComponent implements OnInit {
   cadastrar(){
 
     this.usuario.setUsuario.push(
-      {nome: this.nome, telefone: this.telefone, email: this.email}
+      {nome: this.nome, telefone: this.telefone, email: this.email, sexo: this.sexo}
     );
-
+    console.log(this.sexo);
     console.log(this.usuario.setUsuario);
     this.conversaoUsuario = JSON.stringify(this.usuario.setUsuario);
     localStorage.setItem('cadastro', this.conversaoUsuario);
     alert('Cadastro efetuado com sucesso!');
+
   }
 }

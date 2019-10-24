@@ -14,7 +14,5 @@ export class ListarComponent implements OnInit {
   ngOnInit() {
     this.getUsuario = JSON.parse(localStorage.getItem('cadastro'));
     console.log(this.getUsuario);
-    console.log(this.getUsuario[0].nome);
-
   }
 }
