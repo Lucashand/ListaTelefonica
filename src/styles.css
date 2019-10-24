@@ -2,3 +2,8 @@ html,body{
     margin: 0;
     height: 100vh;
 }
+
+head{
+    height: 0vh;
+    margin: 0;
+}

@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
+import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ListarComponent } from './listar/listar.component';
@@ -10,11 +10,13 @@ import { CadastrarComponent } from './cadastrar/cadastrar.component';
   declarations: [
     AppComponent,
     ListarComponent,
-    CadastrarComponent
+    CadastrarComponent,
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    ReactiveFormsModule,
+    FormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

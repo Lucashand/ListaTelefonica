@@ -1,1 +1,14 @@
-<p>cadastrar works!</p>
+<div class="form">
+    <br><label>Nome: </label><input type="text" [(ngModel)]="nome"><br><br>
+    <label>Telefone: </label><input type="text" [(ngModel)]="telefone"><br><br>
+    <label>E-mail: </label><input type="text" [(ngModel)]="email"><br><br>
+    <label>Sexo: </label>
+        <select id="sexo">
+            <option>Masculino</option>
+            <option>Feminino</option>
+            <option>Indefinido</option>
+        </select><br><br>
+    <button type="submit" (click)='cadastrar()'>Salvar</button>
+</div>
+
+

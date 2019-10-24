@@ -1,1 +1,18 @@
-<p>listar works!</p>
+<div class="container">
+    <table>
+        <thead>
+            <td>Nome</td>
+            <td>Telefone</td>
+            <td>E-mail</td>
+            <td>Sexo</td>
+        </thead>
+        <tbody>
+            <tr *ngFor="let usuario of getUsuario">
+                <td>{{usuario.nome}}</td>
+                <td>{{usuario.telefone}}</td>
+                <td>{{usuario.email}}</td>
+                <td></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
