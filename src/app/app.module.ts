@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { ListarComponent } from './listar/listar.component';
 import { CadastrarComponent } from './cadastrar/cadastrar.component';
 import { EditarComponent } from './editar/editar.component';
+import { ExcluirComponent } from './excluir/excluir.component';
 
 @NgModule({
   declarations: [
@@ -13,6 +14,7 @@ import { EditarComponent } from './editar/editar.component';
     ListarComponent,
     CadastrarComponent,
     EditarComponent,
+    ExcluirComponent,
   ],
   imports: [
     BrowserModule,

@@ -12,7 +12,10 @@
                 <td>{{usuario.telefone}}</td>
                 <td>{{usuario.email}}</td>
                 <td>{{usuario.sexo}}</td>
-                <td><button type="submit" (click)='editar(usuario.id)'>Editar</button></td>
+                <td>
+                    <button type="submit" (click)='editar(usuario.id)'>Editar</button> | 
+                    <button type="submit" (click)='excluir(usuario.id)'>Excluir</button>
+                </td>
             </tr>
         </tbody>
     </table>

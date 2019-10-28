@@ -15,5 +15,6 @@ export class AppComponent {
     this.setUsuario = [];
     this.id = 1;
     localStorage.clear();
+    window.location.reload();
   }
 }

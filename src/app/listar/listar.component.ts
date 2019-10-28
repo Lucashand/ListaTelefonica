@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
+import { AppComponent } from '../app.component';
 
 @Component({
   selector: 'app-listar',
@@ -9,9 +10,11 @@ import { Router } from '@angular/router';
 export class ListarComponent implements OnInit {
 
   getUsuario;
+  novoUsuario;
   router: Router;
+  conversaoUsuario;
 
-  constructor(http: Router, router: Router){this.router = router;}
+  constructor(private usuario: AppComponent, private route:ActivatedRoute, http: Router, router: Router){this.router = router;}
 
   ngOnInit() {
     this.getUsuario = JSON.parse(localStorage.getItem('cadastro'));
@@ -20,5 +23,19 @@ export class ListarComponent implements OnInit {
 
   editar(id: string){
       this.router.navigateByUrl('/editar/'+id);
+  }
+
+  excluir(id){
+    for(var indice = 0 ; indice < this.getUsuario.length ; indice++){
+      if(this.getUsuario[indice].id == id){
+        this.getUsuario.splice(indice, 1);
+        console.log(this.getUsuario);
+        localStorage.removeItem('cadastro');
+        this.conversaoUsuario = JSON.stringify(this.getUsuario);
+        localStorage.setItem('cadastro', this.conversaoUsuario);
+        this.usuario.setUsuario = this.getUsuario;
+        alert('Excluído com sucesso!');
+      }
+    }
   }
 }

@@ -3,6 +3,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { CadastrarComponent } from './cadastrar/cadastrar.component';
 import { ListarComponent } from './listar/listar.component';
 import { EditarComponent } from './editar/editar.component';
+import { ExcluirComponent } from './excluir/excluir.component';
 
 const routes: Routes = [
   {path: 'cadastrar', component: CadastrarComponent},
