@@ -9,4 +9,11 @@ export class AppComponent {
   title = 'ListaTelefonica';
 
   public setUsuario = [];
+  public id = 1;
+
+  resetar(){
+    this.setUsuario = [];
+    this.id = 1;
+    localStorage.clear();
+  }
 }

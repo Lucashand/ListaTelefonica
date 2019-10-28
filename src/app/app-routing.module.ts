@@ -2,10 +2,12 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { CadastrarComponent } from './cadastrar/cadastrar.component';
 import { ListarComponent } from './listar/listar.component';
+import { EditarComponent } from './editar/editar.component';
 
 const routes: Routes = [
   {path: 'cadastrar', component: CadastrarComponent},
-  {path: 'listar', component: ListarComponent}
+  {path: 'listar', component: ListarComponent},
+  {path: 'editar/:id', component: EditarComponent}
 ];
 
 @NgModule({
